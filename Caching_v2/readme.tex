@@ -1,0 +1,86 @@
+\documentclass[11pt,letterpaper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{ifpdf}
+\ifpdf
+    \usepackage[pdftex]{graphicx}
+    \graphicspath{{figs/}{matlab/}}   % still needed, even with Inkscape-Pdf-Latex
+    \usepackage[update]{epstopdf}
+\else
+	\usepackage{graphicx}
+	\graphicspath{{figs/}{matlab/}}   % still needed, even with Inkscape-Pdf-Latex
+\fi
+%\usepackage{ifpdf}
+%\ifpdf
+%	\usepackage[pdftex]{graphicx}
+%    \usepackage[update]{epstopdf}
+%\else
+%	\usepackage{graphicx}
+%\fi
+\usepackage{pdflscape}
+\usepackage[]{algorithm2e}
+%\usepackage{wrapfig,bbm}
+\usepackage{enumitem,color}
+\usepackage{amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}{Remark}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{example}{Example}
+\usepackage{hyperref}
+\usepackage{array}
+\usepackage{amsmath,amsthm}
+%\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{amstext}
+%\usepackage{latexsym}
+%\usepackage{color}
+\usepackage{cite,setspace}
+%\usepackage{multirow}
+%\usepackage{breqn}
+%%\usepackage{pdflscape}
+%%\usepackage{afterpage}
+%%\usepackage{capt-of}
+%\allowdisplaybreaks
+%%\usepackage{flushend}
+\usepackage{multirow}
+%
+%\newtheorem{theorem}{\textbf{Theorem}}
+\newtheorem{prop}{\textbf{Proposition}}
+%\newtheorem{prop}{\textbf{Proposition}}
+%\newtheorem{defn}[theorem]{Definition} 
+\newtheorem{defn}{Definition} 
+\newtheorem{IEEEproof}{Proof} 
+\newtheorem{definition}{\textbf{Definition}}%[section]
+%\newtheorem{fact}[theorem]{Fact}
+%\newtheorem{property}{\textbf{Property}}%[section]
+%\newtheorem{corollary}{\textbf{Corollary}}%[section]
+%\newtheorem{claim}{\textbf{Claim}}%[section]
+%\newtheorem{lemma}{\textbf{Lemma}}
+
+\newcommand{\Expt}{\mbox{${\mathbb E}$} }
+\newcommand{\Expth}{\mbox{$\hat{{\mathbb E}}$} }
+\renewcommand{\vec}[1]{\mbox{\boldmath$#1$}}
+\newcommand{\SNR}{{\sf SNR}}
+
+\begin{document}
+Main function:
+
+1. \texttt{TianYumiddleMR\_v2.m}
+
+\textit{input}: \texttt{N} and \texttt{K};
+
+\textit{output}: a figure showing new corner points.
+
+\begin{itemize}
+\item In this function, only \texttt{N} and \texttt{K} in the beginning (line 5) can be customized. The function will output a figure showing new $(M,R)$ corner point(s) (if found) between a pair of points from Tian coding scheme and Yu coding scheme.
+
+\item The function is structured into 6 sections, the first 5 sections aim to storing the matrices \texttt{M}, \texttt{R}, \texttt{Aeq}, etc., for later use in the optimizing process which is in section 6. 
+
+\item The optimization works by solving the LP with the objective function $M+\alpha R$. For a fixed $t$, each iteration finds a new corner point among all demands, that is, the best point that all demands can reach, therefore the effort of performing polygon intersection is saved.
+
+\item The file paths in line 153 and line 173 need to be customized and remain consistent. 
+\end{itemize}
+
+
+
+\end{document}
