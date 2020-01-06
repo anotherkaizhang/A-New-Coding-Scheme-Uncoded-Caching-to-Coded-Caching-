@@ -19,7 +19,7 @@ Function outputs two figures
 * The 2nd figure is a zoomed-in version of the 1st figure, focucing on the region where K = t.
 * The traddoff line for each demand 'd' is plotted. For all file requested demands 'd', the corner point is labeled with decomposision pattern. e.g. (N,K,t) = (3,4,2), for demand (2, 1, 1), there is one corner point (4/3, 5/6), with label
 
-<center><img src='https://github.com/kzhang14/A-New-Coding-Scheme-Uncoded-Caching-to-Coded-Caching-/blob/master/resources/plot34-page-001.jpg'></center>
+<center><img src='https://github.com/kzhang14/A-New-Coding-Scheme-Uncoded-Caching-to-Coded-Caching-/blob/master/resources/plot34-page-001.jpg'  width="400" height="300"></center>
 
 [1 3]
 
