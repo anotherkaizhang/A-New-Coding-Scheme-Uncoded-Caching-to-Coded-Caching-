@@ -1,0 +1,42 @@
+PartialDecomposition Program(R) Version 5.0 2018/4/26
+
+Note: This is an updated version of Vertion 4. In this version, all demands are combined together to perform the LP, so it can only run up to the parameter of (4,8), which takes about 9 hours on the Lenovo laptop (i7 CPU, 16GB memory). 
+
+When finished, go to folder and find the plot function. It will generate a perfict figure for the paper.
+
+General Usage Notes
+---------------------
+
+- Function "func_partialDecomposition(N, K, t)" takes three arguments as input,
+  -- N: number of files
+  -- K: number of users
+  -- t: integer from [0:K]
+
+- Function outputs two figures
+  -- The 1st figure is the (M,R)-tradeoff line of Tian-Chen scheme and Yu scheme.
+  -- The 2nd figure is a "zoom-in" version of the 1st figure, focucing on the region of the 't'-value.
+  -- The traddoff line for each demand 'd' is plotted. For all file requested demands 'd', the corner point is labeled with decomposision pattern. e.g. (N,K,t) = (3,4,2), for demand (2, 1, 1), there is one corner point (4/3, 5/6), with label
+	----
+	[1 3]
+	[1 2]
+	[1], [2 3]
+     meaning only for transmission type including all three files are decomposed, into A, B+C.
+
+     When a corner point is get from more than one decomposition patterns, e.g. (N,K,t) = (3,5,2), for demand (2, 2, 1), there is one corner point with label
+	-----
+	[2 3]
+	[1 2]
+	[1 3]
+	[1 2]
+	[1],[2],[3]
+	-----
+	[2 3]
+	[1], [2]
+	[1 3]
+	[1], [2]
+	[1],[2],[3]  
+     meaning two decomposition patterns should be mixed to get this corner point. '-----' are used to separate each decomposition pattern.
+  -- The red star '*' indicates an achievable corner point by all demands.
+============================================================================================================================================
+Program can be reached at:
+E-mail:kaizhang@tamu.edu
