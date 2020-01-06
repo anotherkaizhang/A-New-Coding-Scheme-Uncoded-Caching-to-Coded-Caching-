@@ -23,7 +23,7 @@ Note: files such as 'A', 'B', 'C', etc are denoted as 1, 2, 3, etc... to not to 
 
 <center><img src='https://github.com/kzhang14/A-New-Coding-Scheme-Uncoded-Caching-to-Coded-Caching-/blob/master/resources/plot34-page-001.jpg'  width="400" height="300"></center>
 
-A new corner point (inner bound) of the caching system (3,4). In fact, the new point (4/3, 5/6) also locates on the outer bound, meaning it is an optimal point.
+A new corner point (inner bound) of the caching system (3,4). In fact, the new point (4/3, 5/6) also locates on the outer bound, meaning it is an **optimal** point.
 
 [1 3]
 
